@@ -9,14 +9,15 @@ The site is built with Jekyll on GitHub Pages, using the [Moon](https://github.c
 
 **Content and branding**
 - `_config.yml`: site title is "Sula Research", with our own bio line and description. `url` is `https://sula-research.github.io`.
-- Logo: the Moon crescent is replaced by the pixel-art bird (`assets/img/logo.png`, a transparent PNG cut out of `bird logo01.jpg`).
+- Logo: the Moon crescent is replaced by our bird-diving-into-water logo (`assets/img/logo.png`, a transparent PNG cut out of `bird logo 02.jpg`). It is shown in full at 170 px wide instead of being cropped to a circle.
 - Background: a crop of a blue-footed booby photo (`assets/img/placeholder-big.jpg`, source: Diego F. Parra on Pexels), centred so the feet sit below the main box.
+- "Posts" is renamed **Public Research**: the button on the home page, the page title, and the (currently hidden) menu entries. The address is still `/posts/`.
+- Facebook and Instagram are removed from the social icons (their lines are deleted from `_config.yml`). Twitter, GitHub and Steam are still there as placeholders (see "Still to do").
 
 **Look and feel** (all in `_sass/site.scss`)
 - The home box is black with white text and a thin grey border, matching the buttons inside it.
-- The About, Posts and Projects pages use the same black box, grey border and white text. Post and project cards inside them match too.
+- The About, Public Research and Projects pages use the same black box, grey border and white text. Post and project cards inside them match too.
 - The home box sits near the top of the page (`padding-top: 11.5vh` on `.header.flex`) instead of vertically centred.
-- The logo is shown in full instead of being cropped to a circle.
 
 **Configuration**
 - `gems:` in `_config.yml` is now `plugins:`. This is the key current Jekyll and GitHub Pages expect.
@@ -24,7 +25,7 @@ The site is built with Jekyll on GitHub Pages, using the [Moon](https://github.c
 
 ## Links are temporarily disabled
 
-Every link on the site is switched off until the real content is written. This covers the About, Posts and Projects buttons, the social icons, the logo and title links, and any links inside pages and posts. The hamburger menu is hidden because it contains only links.
+Every link on the site is switched off until the real content is written. This covers the About, Public Research and Projects buttons, the social icons, the logo and title links, and any links inside pages and posts. The hamburger menu is hidden because it contains only links.
 
 How it works (`disable_links` in `_config.yml`):
 - `_includes/head.html` adds CSS that blocks clicks on links and hides the menu.
@@ -32,12 +33,40 @@ How it works (`disable_links` in `_config.yml`):
 
 **To turn links back on**, set `disable_links: false` in `_config.yml` (or delete the line) and push.
 
-The About, Posts and Projects pages still exist at `/about/`, `/posts/` and `/projects/` if someone types the address in directly, and they still hold Moon's sample content.
+The About, Public Research and Projects pages still exist at `/about/`, `/posts/` and `/projects/` if someone types the address in directly, and they still hold Moon's sample content.
+
+## Adding content
+
+**About page**: edit `about/index.md`. Replace everything under the `---` front matter block at the top with your own text (Markdown). Keep the front matter, and change `title:` if you want a different heading.
+
+**Public Research**: each item is a Markdown file in `_posts/`, named `YYYY-MM-DD-short-title.md`. For example `_posts/2026-11-01-first-paper.md`:
+
+```markdown
+---
+layout: post
+title: "Title of the piece"
+date: 2026-11-01
+excerpt: "One or two sentences shown on the list page."
+tag:
+- research
+comments: false
+---
+
+The body goes here, in Markdown.
+```
+
+It appears on the Public Research page automatically, newest first.
+
+**Projects**: the same, but add `project: true` to the front matter. Posts with `project: true` show up under Projects instead of Public Research.
+
+**Removing the sample content**: delete the Moon sample files in `_posts/` (the ones dated 2012 to 2016). The old `moon-theme` post is the sample project.
+
+To see your changes before pushing, preview locally (below). After pushing, GitHub Pages rebuilds in about a minute.
 
 ## Still to do
 
-- Replace the sample content in `about/`, `posts/`, `projects/` and `_posts/` with real content.
-- Replace the placeholder social usernames in `_config.yml` (`twitter`, `facebook`, `github-url`, `instagram`, `steam`) with real accounts, and remove the ones we do not use.
+- Replace the sample content in `about/` and `_posts/` with real content (see "Adding content").
+- Replace the placeholder social usernames in `_config.yml` (`twitter`, `github-url`, `steam`) with real accounts, and remove any we do not use.
 - Set `disqus_shortname` to our own Disqus account, or remove comments. It currently points at the theme author's.
 - Fix the typos in the `description` in `_config.yml` ("Independant", "operaton").
 - Add a contact email (`email:` in `_config.yml`).
