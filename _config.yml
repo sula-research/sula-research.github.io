@@ -1,121 +1,80 @@
-# ----
 # Site
+title:              Sula Research
+bio:                'Quantitative Research, Financial Machine Learning'
+description:        "Sula Research is an Independant Quantitative Research and Trading operaton in Sydney"
+reading_time:       true
+words_per_minute:   200
+logo:               'assets/img/logo.png'
+background:         'assets/img/placeholder-big.jpg'
+tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
+locale:             en_US
+url:                https://sula-research.github.io
 
-title: Sula Research
-url: "https://sula-research.github.io"
-baseurl:
-google_analytics_key:
-google_maps_javascript_api_key:
-disqus_shortname:
+# Jekyll
+permalink:          /:title/
+markdown:           kramdown
+highlighter:        rouge
+kramdown:
+  auto_ids:         true
+  footnote_nr:      1
+  entity_output:    as_char
+  toc_levels:       1..6
+  enable_coderay:   false
+mathjax:            true
+sass:
+  sass_dir:         _sass
+  style:            compressed
 
-# Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
-logo: /siteicon.png
-description: App marketing template for Jekyll.
-author:
-  name:
-  email:
-  twitter: # twitter username without the @ symbol
-social:
-  name: Frisco Template
-  links:
-    - https://github.com/CloudCannon/frisco-jekyll-template
+# Comments
+disqus_shortname:   taylantatli
 
-# -----
-# Build
+# Social
+# if you don't have any of social below, comment the line.
+#google:
+  #plus:            #username
+  #analytics:
+  #verify:
+  #ad-client:
+  #ad-slot:
+#bing-verify:
+#email:
+twitter:            username
+facebook:           username
+github-url:         username
+#stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
+#linkedin:          username
+#xing:              username
+instagram:          username
+#lastfm:            username
+#tumblr:            username
+#medium:            '@username'
+#pinterest:         username
+#foursquare:        username
+steam:              username
+#dribbble:          username
+#youtube:           username
+#youtube-channel:   channel
+#soundcloud:        username
+#weibo:             username
+#flickr:            username
+#codepen:           username
+#keybase:           username
+#xmpp:              username@server.com
+#hackernews:        username
 
-timezone: Etc/UTC
-
-permalink: pretty
-
+# Plugins
 plugins:
-  - jekyll-sitemap
-  - jekyll-seo-tag
+  - jekyll-mentions
   - jekyll-feed
-  - jekyll-paginate
-  - jekyll-archives
+  - jekyll-sitemap
+  - jekyll-gist
 
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - README.md
-  - LICENCE
+jekyll-mentions:
+    base_url: https://github.com
 
-collections:
-  staff_members:
-    _hide_content: true
-    _icon: account_circle
+# Temporarily disable every link on the site (menu, buttons, social icons, in-page links)
+# while the content is being written. Set to false to turn links back on.
+disable_links:      true
 
-paginate: 10
-paginate_path: "/blog/:num/"
-
-jekyll-archives:
-  enabled: ['categories']
-
-defaults:
-  -
-    scope:
-      path: ""
-      type: "staff_members"
-    values:
-      _options:
-        image_path:
-          width: 440
-          height: 440
-          uploads_dir: "/images/staff_members"
-  -
-    scope:
-      path: ""
-    values:
-      layout: "default"
-  -
-    scope:
-      type: "posts"
-    values:
-      layout: "post"
-      _options:
-        image:
-          width: 2000
-          height: 1322
-          resize_style: cover
-          uploads_dir: "/images/post_uploads"
-        content:
-          width: 1500
-          height: 2000
-          uploads_dir: "/images/post_uploads"
-  -
-    scope:
-      path: "contact-success.html"
-    values:
-      layout: "page"
-  -
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      image:
-        width: 2000
-        height: 1322
-        resize_style: cover
-      bottom_image:
-        width: 2000
-        height: 1322
-        resize_style: cover
-
-# -----------
-# CloudCannon
-
-social_icons:
-  - Facebook
-  - Google Plus
-  - Instagram
-  - LinkedIn
-  - Pinterest
-  - Tumblr
-  - Twitter
-  - YouTube
-  - Email
-  - RSS
-
-_comments:
-  description: Text shown when sharing on social media
-  blurb: Short bio or description of this person
+# Exclude list
+exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile]

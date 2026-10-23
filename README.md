@@ -1,78 +1,71 @@
-# Frisco
+# Sula Research
 
-App promotion themed template for Jekyll. Browse through a [live demo](https://brave-submarine.cloudvent.net/).
-Increase the web presence of a App with this configurable theme.
+Website for Sula Research, an independent quantitative research and trading operation based in Sydney.
+Live at https://sula-research.github.io
 
-![Frisco template screenshot](images/_screenshot.jpg)
+The site is built with Jekyll on GitHub Pages, using the [Moon](https://github.com/TolgaTatli/Moonrise/) theme by Taylan Tatli (MIT licence).
 
-Frisco was made by [CloudCannon](http://cloudcannon.com/), the Cloud CMS for Jekyll.
+## Changes from the stock Moon theme
 
-Find more templates, themes and step-by-step Jekyll tutorials at [CloudCannon Academy](https://learn.cloudcannon.com/).
+**Content and branding**
+- `_config.yml`: site title is "Sula Research", with our own bio line and description. `url` is `https://sula-research.github.io`.
+- Logo: the Moon crescent is replaced by the pixel-art bird (`assets/img/logo.png`, a transparent PNG cut out of `bird logo01.jpg`).
+- Background: a crop of a blue-footed booby photo (`assets/img/placeholder-big.jpg`, source: Diego F. Parra on Pexels), centred so the feet sit below the main box.
 
-[![Deploy to CloudCannon](https://buttons.cloudcannon.com/deploy.svg)](https://app.cloudcannon.com/register#sites/connect/github/CloudCannon/frisco-jekyll-template)
+**Look and feel** (all in `_sass/site.scss`)
+- The home box is black with white text and a thin grey border, matching the buttons inside it.
+- The About, Posts and Projects pages use the same black box, grey border and white text. Post and project cards inside them match too.
+- The home box sits near the top of the page (`padding-top: 11.5vh` on `.header.flex`) instead of vertically centred.
+- The logo is shown in full instead of being cropped to a circle.
 
-## Features
+**Configuration**
+- `gems:` in `_config.yml` is now `plugins:`. This is the key current Jekyll and GitHub Pages expect.
+- `disable_links: true` is new (see below).
 
-* Contact form
-* Pre-built pages
-* Pre-styled components
-* Blog with pagination
-* Post category pages
-* Disqus comments for posts
-* Staff and author system
-* Configurable footer
-* Optimised for editing in [CloudCannon](http://cloudcannon.com/)
-* RSS/Atom feed
-* SEO tags
-* Google Analytics
+## Links are temporarily disabled
 
-## Setup
+Every link on the site is switched off until the real content is written. This covers the About, Posts and Projects buttons, the social icons, the logo and title links, and any links inside pages and posts. The hamburger menu is hidden because it contains only links.
 
-1. Add your site and author details in `_config.yml`.
-2. Add your Google Analytics and Disqus keys to `_config.yml`.
-3. Get a workflow going to see your site's output (with [CloudCannon](https://app.cloudcannon.com/) or Jekyll locally).
+How it works (`disable_links` in `_config.yml`):
+- `_includes/head.html` adds CSS that blocks clicks on links and hides the menu.
+- `_includes/scripts.html` removes the `href` from every link, so they cannot be followed by keyboard either.
 
-## Develop
+**To turn links back on**, set `disable_links: false` in `_config.yml` (or delete the line) and push.
 
-Frisco was built with [Jekyll](http://jekyllrb.com/) version 3.3.1, but should support newer versions as well.
+The About, Posts and Projects pages still exist at `/about/`, `/posts/` and `/projects/` if someone types the address in directly, and they still hold Moon's sample content.
 
-Install the dependencies with [Bundler](http://bundler.io/):
+## Still to do
 
-~~~bash
-$ bundle install
-~~~
+- Replace the sample content in `about/`, `posts/`, `projects/` and `_posts/` with real content.
+- Replace the placeholder social usernames in `_config.yml` (`twitter`, `facebook`, `github-url`, `instagram`, `steam`) with real accounts, and remove the ones we do not use.
+- Set `disqus_shortname` to our own Disqus account, or remove comments. It currently points at the theme author's.
+- Fix the typos in the `description` in `_config.yml` ("Independant", "operaton").
+- Add a contact email (`email:` in `_config.yml`).
 
-Run `jekyll` commands through Bundler to ensure you're using the right versions:
+## Previewing locally
 
-~~~bash
-$ bundle exec jekyll serve
-~~~
+1. Install Ruby with the DevKit (on Windows: `winget install RubyInstallerTeam.RubyWithDevKit.3.4`).
+2. `gem install jekyll webrick tzinfo tzinfo-data jekyll-feed jekyll-sitemap jekyll-gist jekyll-mentions`
+3. In this folder run `jekyll serve`, then open http://localhost:4000
 
-## Editing
+The `Gemfile` pins an old Jekyll (3.2), so run Jekyll directly as above (set `JEKYLL_NO_BUNDLER_REQUIRE=1` if Bundler complains) rather than with `bundle exec`. GitHub Pages ignores the `Gemfile` and builds with its own versions.
 
-Frisco is already optimised for adding, updating and removing pages, staff, advice, company details and footer elements in CloudCannon.
+Other Jekyll templates we looked at (Frisco, MVM, Grayscale, Jekyll for Everyone, Spectral) are not in this repo. The Frisco version with a landing-only mode is kept on a local branch, `frisco-landing-backup`.
 
-### Posts
+## About the Moon theme
 
-* Add, update or remove a post in the *Posts* collection.
-* The **Staff Author** field links to members in the **Staff Members** collection.
-* Documentation pages are organised in the navigation by category, with URLs based on the path inside the `_docs` folder.
-* Change the defaults when new posts are created in `_posts/_defaults.md`.
+[Moon](https://tolgatatli.github.io/Moon) is a minimal, one column Jekyll theme. Its features include:
 
-### Contact Form
+- Responsive layout
+- Disqus integration
+- Syntax highlighting
+- Optional post image
+- Social icons
+- Page for sharing projects
+- Optional background image
+- Simple navigation menu
+- MathJax support
 
-* Preconfigured to work with CloudCannon, but easily changed to another provider (e.g. [FormSpree](https://formspree.io/)).
+Theme setup guide: https://tolgatatli.github.io/Moon/moon-theme/
 
-### Staff
-
-* Reused around the site to save multiple editing locations.
-
-### Footer
-
-* Exposed as a data file to give clients better access.
-* Set in the *Data* / *Navigation* section.
-
-### Footer
-
-* Exposed as a data file to give clients better access.
-* Set in the *Data* / *Footer* section.
+The theme has moved to a new repository, [Moonrise](https://github.com/TolgaTatli/Moonrise/).

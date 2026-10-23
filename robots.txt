@@ -1,6 +1,3 @@
----
-layout: null
-sitemap: false
----
+# Allow crawling of all content
 User-agent: *
-Sitemap: {{ site.url }}/sitemap.xml
+Disallow:
