@@ -8,7 +8,7 @@ The site is built with Jekyll on GitHub Pages, using the [Moon](https://github.c
 ## Changes from the stock Moon theme
 
 **Content and branding**
-- `_config.yml`: site title is "Sula Research", with our own bio line and description. `url` is `https://sula-research.github.io`.
+- `_config.yml`: site title is "Sula Research", with our own bio line ("Quantitative Research | Financial Machine Learning") and description. `url` is `https://sula-research.github.io`.
 - Logo: the Moon crescent is replaced by our bird-diving-into-water logo (`assets/img/logo.png`, a transparent PNG cut out of `bird logo 02a.jpg`). It is shown in full at 170 px wide instead of being cropped to a circle.
 - Background: a crop of a blue-footed booby photo (`assets/img/placeholder-big.jpg`, source: Diego F. Parra on Pexels), centred so the feet sit below the main box.
 - "Posts" is renamed **Public Research**: the button on the home page, the page title, and the (currently hidden) menu entries. The address is still `/posts/`.
@@ -17,6 +17,7 @@ The site is built with Jekyll on GitHub Pages, using the [Moon](https://github.c
 **Look and feel** (all in `_sass/site.scss`)
 - The home box is black with white text and a thin grey border, matching the buttons inside it.
 - The About, Public Research and Projects pages use the same black box, grey border and white text. Post and project cards inside them match too.
+- The site name is shown in capitals to the right of the logo, vertically centred on it (`.brand` in `_sass/site.scss`, markup in `_layouts/home.html`). The 8 px nudge there is tuned to the current logo, so re-check it if the logo or its size changes.
 - The home box sits near the top of the page (`padding-top: 11.5vh` on `.header.flex`) instead of vertically centred.
 
 **Configuration**
