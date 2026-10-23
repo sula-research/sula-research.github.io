@@ -320,6 +320,8 @@ header .entry-meta {
 	.title {
 		margin: 0;
 		text-align: left;
+		position: relative;
+		top: 8px;	// optical centring against the logo
 		p {
 			font-size: 1.9rem !important;
 			line-height: 1.15;
