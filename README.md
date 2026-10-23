@@ -9,7 +9,7 @@ The site is built with Jekyll on GitHub Pages, using the [Moon](https://github.c
 
 **Content and branding**
 - `_config.yml`: site title is "Sula Research", with our own bio line and description. `url` is `https://sula-research.github.io`.
-- Logo: the Moon crescent is replaced by our bird-diving-into-water logo (`assets/img/logo.png`, a transparent PNG cut out of `bird logo 02.jpg`). It is shown in full at 170 px wide instead of being cropped to a circle.
+- Logo: the Moon crescent is replaced by our bird-diving-into-water logo (`assets/img/logo.png`, a transparent PNG cut out of `bird logo 02a.jpg`). It is shown in full at 170 px wide instead of being cropped to a circle.
 - Background: a crop of a blue-footed booby photo (`assets/img/placeholder-big.jpg`, source: Diego F. Parra on Pexels), centred so the feet sit below the main box.
 - "Posts" is renamed **Public Research**: the button on the home page, the page title, and the (currently hidden) menu entries. The address is still `/posts/`.
 - Facebook and Instagram are removed from the social icons (their lines are deleted from `_config.yml`). Twitter, GitHub and Steam are still there as placeholders (see "Still to do").
