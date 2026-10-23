@@ -12,7 +12,7 @@ The site is built with Jekyll on GitHub Pages, using the [Moon](https://github.c
 - Logo: the Moon crescent is replaced by our bird-diving-into-water logo (`assets/img/logo.png`, a transparent PNG cut out of `bird logo 02a.jpg`). It is shown in full at 170 px wide instead of being cropped to a circle.
 - Background: a crop of a blue-footed booby photo (`assets/img/placeholder-big.jpg`, source: Diego F. Parra on Pexels), centred so the feet sit below the main box.
 - "Posts" is renamed **Public Research**: the button on the home page, the page title, and the (currently hidden) menu entries. The address is still `/posts/`.
-- Facebook, Instagram and Steam are removed from the social icons (their lines are deleted from `_config.yml`). Twitter and GitHub are still there as placeholders (see "Still to do").
+- Facebook, Instagram and Steam are removed from the social icons (their lines are deleted from `_config.yml`). LinkedIn is switched on (`linkedin: liamfinegan`, which links to `linkedin.com/in/liamfinegan`, a personal profile). Twitter and GitHub are still there as placeholders (see "Still to do").
 
 **Look and feel** (all in `_sass/site.scss`)
 - The home box is black with white text and a thin grey border, matching the buttons inside it.
