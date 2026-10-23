@@ -306,3 +306,24 @@ header .entry-meta {
 		}
 	}
 }
+
+// Home box: logo on the left, name on the right
+.header .container .brand {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 8px 12px;
+	.img-circle {
+		display: block;
+	}
+	.title {
+		margin: 0;
+		text-align: left;
+		p {
+			font-size: 1.9rem !important;
+			line-height: 1.15;
+			margin: 0;
+		}
+	}
+}
