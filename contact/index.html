@@ -21,19 +21,16 @@ comments: false
     <textarea id="contact-message" name="message" rows="6" required></textarea>
 
     <button class="btn" type="submit">Send message</button>
-    <p class="form-note" id="contact-status" role="status" aria-live="polite">{% unless site.email %}This form is a preview; messages are not sent yet.{% endunless %}</p>
 </form>
 
 <script>
 (function () {
     var form = document.getElementById('contact-form');
-    var status = document.getElementById('contact-status');
     var recipient = {{ site.email | default: '' | jsonify }};
 
     form.addEventListener('submit', function (event) {
         event.preventDefault();
         if (!recipient) {
-            status.textContent = 'The contact form is not available yet.';
             return;
         }
 
@@ -43,7 +40,6 @@ comments: false
         var message = form.elements.message.value.trim();
         var body = 'From: ' + name + ' <' + email + '>\n\n' + message;
         var mailto = 'mailto:' + recipient + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-        status.textContent = 'Your email app will open with the message ready to send.';
         window.location.href = mailto;
     });
 }());
