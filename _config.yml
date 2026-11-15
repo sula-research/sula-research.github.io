@@ -38,10 +38,10 @@ disqus_shortname:   taylantatli
   #ad-slot:
 #bing-verify:
 #email:
-twitter:            username
-github-url:         username
+#twitter:           username
+#github-url:        username
 #stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
-linkedin:           liamfinegan
+#linkedin:          username
 #xing:              username
 #lastfm:            username
 #tumblr:            username
@@ -71,7 +71,7 @@ jekyll-mentions:
 
 # Temporarily disable every link on the site (menu, buttons, social icons, in-page links)
 # while the content is being written. Set to false to turn links back on.
-disable_links:      true
+disable_links:      false
 
 # Exclude list
 exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile]

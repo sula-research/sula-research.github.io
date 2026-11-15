@@ -1,0 +1,26 @@
+---
+layout: page
+title: Client Login
+description: Sula Research client portal preview.
+comments: false
+---
+
+<p>Client portal</p>
+
+<form class="site-form" id="client-login-form">
+    <label for="client-email">Email</label>
+    <input id="client-email" type="email" autocomplete="off" placeholder="you@example.com" required>
+
+    <label for="client-password">Password</label>
+    <input id="client-password" type="password" autocomplete="off" placeholder="Password" required>
+
+    <button class="btn" type="submit">Log in</button>
+    <p class="form-note" role="status" aria-live="polite">Client access is coming soon. This preview does not accept credentials.</p>
+</form>
+
+<script>
+document.getElementById('client-login-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    this.reset();
+});
+</script>

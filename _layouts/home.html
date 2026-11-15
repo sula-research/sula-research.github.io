@@ -31,17 +31,16 @@ layout: compress
                         	<p style="font-size:1rem;font-weight:300">{{ site.bio }}</p>
 			            </a>
                     </h3>
-                    {% include social-links.html %}
                   <hr class="hr-line">
                   <h3 class="title">
-                         <a class="btn zoombtn" href="{{ site.url }}/about">
+                         <a class="btn zoombtn" href="{{ '/about/' | relative_url }}">
                          About
                          </a>
-                         <a class="btn zoombtn" href="{{ site.url }}/posts">
-                         Public Research
+                         <a class="btn zoombtn" href="{{ '/contact/' | relative_url }}">
+                         Contact
                          </a>
-                         <a class="btn zoombtn" href="{{ site.url }}/projects">
-                         Projects
+                         <a class="btn zoombtn" href="{{ '/client-login/' | relative_url }}">
+                         Client Login
                          </a>
                  </h3>
             </div>

@@ -331,3 +331,38 @@ header .entry-meta {
 		}
 	}
 }
+
+// Forms on the contact and client pages use the same black-card theme.
+.site-form {
+    max-width: 540px;
+    margin: 1.5rem auto 0;
+    text-align: left;
+    label {
+        display: block;
+        margin: 1rem 0 0.35rem;
+        color: $white;
+    }
+    input, textarea {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid rgba($white, 0.35);
+        border-radius: 3px;
+        background: rgba($white, 0.08);
+        color: $white;
+        font: inherit;
+    }
+    input:focus, textarea:focus {
+        outline: 2px solid $white;
+        outline-offset: 2px;
+    }
+    .btn {
+        margin-top: 1.25rem;
+        cursor: pointer;
+    }
+    .form-note {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}
