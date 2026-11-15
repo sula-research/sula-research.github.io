@@ -262,8 +262,8 @@ header .entry-meta {
 	border: 0;
 	border-radius: 0;
 	height: auto;
-	width: 170px;
-	margin-top: 10px;
+	width: 110px;
+	margin-top: 0;
 }
 
 // Same black card with grey border and white text on the inner pages (About, Posts, Projects, posts)
@@ -307,21 +307,19 @@ header .entry-meta {
 	}
 }
 
-// Home box: logo on the left, name on the right
+// Home box: logo above the name
 .header .container .brand {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	flex-wrap: wrap;
-	gap: 8px 12px;
+	gap: 8px;
 	.img-circle {
 		display: block;
 	}
 	.title {
 		margin: 0;
-		text-align: left;
-		position: relative;
-		top: 8px;	// optical centring against the logo
+		text-align: center;
 		p {
 			font-size: 1.9rem !important;
 			text-transform: uppercase;
