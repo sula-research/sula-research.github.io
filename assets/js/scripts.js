@@ -4,8 +4,11 @@ $(function() {
     animationClasses : { classin : 'dl-animate-in', classout : 'dl-animate-out' }
   });
 });
-// Need this to show animation when go back in browser
-window.onunload = function() {};
+// A history return can restore the page without running document.ready again.
+function showPageAfterHistoryNavigation() {
+  $(".container, .wrapper").removeClass("fadeOut").addClass("fadeIn");
+}
+window.addEventListener("pageshow", showPageAfterHistoryNavigation);
 
 // Add lightbox class to all image links
 $("a[href$='.jpg'],a[href$='.jpeg'],a[href$='.JPG'],a[href$='.png'],a[href$='.gif']").addClass("image-popup");
@@ -17,17 +20,7 @@ $(function() {
 
 // All others
 $(document).ready(function() {
-    // zoom in/zoom out animations
-    if ($(".container").hasClass('fadeOut')) {
-        $(".container").removeClass("fadeOut").addClass("fadeIn");
-    }
-    if ($(".wrapper").hasClass('fadeOut')) {
-        $(".wrapper").removeClass("fadeOut").addClass("fadeIn");
-    }
-    $(".zoombtn").click(function() {
-        $(".container").removeClass("fadeIn").addClass("fadeOut");
-        $(".wrapper").removeClass("fadeIn").addClass("fadeOut");
-    });
+    showPageAfterHistoryNavigation();
     // go up button
     $.goup({
         trigger: 500,
