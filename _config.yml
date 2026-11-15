@@ -1,7 +1,7 @@
 # Site
 title:              Sula Research
 bio:                'Quantitative Research | Financial Machine Learning'
-description:        "Sula Research is an Independant Quantitative Research and Trading operaton in Sydney"
+description:        "Independent quantitative research and trading based in Sydney."
 reading_time:       true
 words_per_minute:   200
 logo:               'assets/img/logo.png'
@@ -26,7 +26,7 @@ sass:
   style:            compressed
 
 # Comments
-disqus_shortname:   taylantatli
+# disqus_shortname: Set this when adding a comment system.
 
 # Social
 # if you don't have any of social below, comment the line.
@@ -74,4 +74,4 @@ jekyll-mentions:
 disable_links:      false
 
 # Exclude list
-exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile]
+exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile, _posts, posts, projects, tags]
